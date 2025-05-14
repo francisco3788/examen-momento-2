@@ -4,42 +4,44 @@ export default function Page() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-red-400 p-4">
       <div className="w-72 overflow-hidden shadow-xl">
-        {/* Header Section - Exact Qatar Airways Color */}
-        <div className="text-white" style={{ backgroundColor: "#6A1B57" }}>
-          <div className="p-5 pb-0">
-            <div className="flex items-center mb-3">
-              <ArrowLeft size={18} />
+        {/* Header Section - Qatar Airways Style */}
+        <div
+          className="relative text-white flex flex-col items-center justify-center h-32"
+          style={{ backgroundColor: "#83003c" }}
+        >
+          {/* Flecha */}
+          <div className="absolute left-4 top-4">
+            <ArrowLeft size={18} />
+          </div>
+
+          {/* LHR - LOGO - DXB */}
+          <div className="flex items-center justify-between w-full px-5">
+            <div className="text-xl font-extrabold text-left">
+              <div>LHR</div>
+              <div className="text-[8px]  font-normal tracking-wide opacity-80">LONDON</div>
             </div>
-            
-            <div className="flex items-center justify-between">
-              <div className="text-xl font-extrabold">
-                <div>LHR</div>
-                <div className="text-xs font-normal tracking-wide opacity-80">LONDON</div>
-              </div>
-              
-              <div className="flex items-center justify-center mx-2">
-                <div className="relative">
-                  <div className="w-10 h-10 border-2 border-white rounded-full flex items-center justify-center">
-                    <div className="relative w-6 h-1 bg-white -rotate-45">
-                      <div className="absolute top-0 left-1/2 w-2 h-2 bg-white transform -translate-x-1/2 -translate-y-1/2 rounded-sm"></div>
-                      <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-white transform -translate-x-1/2 translate-y-1/2 rounded-sm"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="text-xl font-extrabold text-right">
-                <div>DXB</div>
-                <div className="text-xs font-normal tracking-wide opacity-80">DUBAI</div>
-              </div>
+
+            <div className="flex items-center justify-center">
+              <img
+                src="/logo-qatar.png"
+                alt="Qatar Airways Logo"
+                className="h-10 w-10 object-contain"
+              />
+            </div>
+
+            <div className="text-xl font-extrabold text-right">
+              <div>DXB</div>
+              <div className="text-[8px]  font-normal tracking-wide opacity-80">DUBAI</div>
             </div>
           </div>
-          
-          <div className="text-center text-xs pb-2 pt-3 font-light tracking-widest uppercase" style={{ letterSpacing: "0.2em", fontSize: "10px" }}>
+
+          {/* Texto Qatar Airways centrado al borde inferior */}
+          <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-[10px] font-light tracking-[0.2em] uppercase text-white/80">
             QATAR AIRWAYS
           </div>
         </div>
-        
+
+        {/* Tarjeta blanca con datos */}
         <div className="bg-white p-3 pt-1">
           <div className="flex justify-between items-center mb-2">
             <div className="w-full">
@@ -47,20 +49,30 @@ export default function Page() {
                 <div></div>
                 <div className="text-gray-400 text-sm">Business</div>
               </div>
-              <div className="flex items-center justify-center w-full">
-                <div className="text-xl font-medium mr-4">3:40am</div>
-                <div className="relative w-10 h-0.5 bg-gray-400">
+              <div className="flex items-center justify-between w-full">
+                <div className="text-xl font-medium">3:40am</div>
+                <div className="relative w-16 h-0.5 bg-gray-400">
                   <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                    <svg width="16" height="6" viewBox="0 0 16 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 3H15M15 3L12 1M15 3L12 5" stroke="#9CA3AF" strokeWidth="1" />
+                    <svg
+                      width="16"
+                      height="6"
+                      viewBox="0 0 16 6"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0 3H15M15 3L12 1M15 3L12 5"
+                        stroke="#9CA3AF"
+                        strokeWidth="1"
+                      />
                     </svg>
                   </div>
                 </div>
-                <div className="text-xl font-medium ml-4">1:15pm</div>
+                <div className="text-xl font-medium">1:15pm</div>
               </div>
             </div>
           </div>
-          
+
           <div className="mb-4">
             <div className="flex justify-between">
               <div>
@@ -68,12 +80,12 @@ export default function Page() {
                 <div className="font-medium text-sm">January 17, 2015</div>
               </div>
               <div className="text-right">
-                <div className="text-gray-400 text-xs invisible">Time</div>
+                <div className="text-gray-400 text-xs invisible">-</div>
                 <div className="font-medium text-sm">3:00am</div>
               </div>
             </div>
           </div>
-          
+
           <div className="flex justify-between pt-2">
             <div>
               <div className="text-gray-400 text-xs">Flight</div>
@@ -88,10 +100,10 @@ export default function Page() {
               <div className="font-medium text-sm">21a</div>
             </div>
           </div>
-          
-          <div className="mt-6">
+
+          <div className="mt-5 mb-2">
             <div className="flex justify-center items-center">
-              <div className="w-full h-16">
+              <div className="w-full h-12">
                 <svg viewBox="0 0 100 20" className="w-full h-full">
                   <rect x="0" y="0" width="1" height="20" fill="black" />
                   <rect x="2" y="0" width="1" height="20" fill="black" />
